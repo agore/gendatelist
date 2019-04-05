@@ -16,7 +16,10 @@ func main() {
 		usage()
 	}
 
-	outputDates(args)
+	days, _ := outputDates(args)
+	for _, row := range days {
+		fmt.Println(row)
+	}
 }
 
 func outputDates(args string) ([]string, error) {
